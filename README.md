@@ -1,90 +1,80 @@
-<p align="center">
-  <a href="https://t.me/example_store_bot"><img src="data/assets/logo.png" alt="ShopBot"></a>
-</p>
+# Pizza Bot — Telegram бот для пиццерии
 
-This is an example Telegram shop bot. It's a simple and, most importantly, efficient way to place an order without leaving your favorite messenger.
+Разработано командой **QDE Solutions**
 
-## What can it do?
+Pizza Bot — это Telegram-бот для автоматизации заказов пиццы, приёма заявок и работы с клиентами прямо внутри Telegram. Подходит для пиццерий, кафе и служб доставки.
 
-1. `/start` - needed to start the bot and choose the mode (user/admin).
+## Возможности
 
-2. `/menu` - go to the menu.
+- Меню пиццы с категориями
+- Карточки блюд (фото, состав, цена)
+- Выбор размера (маленькая / средняя / большая)
+- Выбор добавок (сыр, соусы, топпинги)
+- Корзина пользователя
+- Оформление заказа в боте
+- Сбор имени, телефона и адреса доставки
+- Выбор способа доставки (самовывоз / курьер)
+- Отправка заказа администратору
+- Уведомления о новых заказах
+- История заказов клиента
+- Быстрый повтор заказа
+- Админ-панель
+- Управление меню (добавление/удаление пицц)
+- Управление ценами и акциями
+- Изменение статуса заказа (готовится / в пути / доставлен)
+- Поддержка нескольких администраторов
 
-3. `/sos` - ask the administrator a question.
+## Для кого подходит
 
-## Menu
+- Пиццерии
+- Кафе
+- Фастфуд
+- Доставка еды
+- Локальные рестораны
 
-The user menu looks like this:
+## Технологии
 
-![User Menu](data/assets/4.png)
+- Python
+- Telegram Bot API
+- Aiogram
+- SQLite / PostgreSQL
+- Redis
+- Docker
 
-## Catalog
+## Возможные доработки
 
-The catalog consists of products sorted by categories. Users can add items to their cart, and the admin has full control over catalog management (addition/removal).
+- Онлайн-оплата (Click, Payme, Uzum, Stripe)
+- Интеграция с POS системой
+- Интеграция с CRM
+- Геолокация доставки
+- Автоматический расчёт стоимости доставки
+- Промокоды и скидки
+- Система бонусов
+- Рассылки и акции
+- Мультиязычность
+- Отслеживание курьера
+- Интеграция с сайтом
 
-## Cart
+## Запуск проекта
 
-The ordering process looks like this: the user goes to the `🛍️ Catalog`, selects the desired category, chooses products, and clicks the `🛒 Cart` button.
 
----
-
-Then, after making sure everything is in place, proceed to checkout by clicking `📦 Place Order`.
-
-## Add a Product
-
-To add a product, select a category and click the `➕ Add Product` button. Then, fill out the "name-description-image-price" form and confirm.
-
-## Contacting Administration
-
-To ask the admin a question, simply select the `/sos` command. There is a limit on the number of questions.
-
-![sos](data/assets/7.png)
-
-## Get started
-
-1. Clone this repository.
-
-2. Create and activate virtual enviroment:
-
-Windows:
-
-```powershell
-python -m venv venv
-& venv/scripts/activate.ps1
-```
-
-UNIX:
-
-```bash
-python3 -m venv venv
-source venv/scripts/activate
-```
-
-3. Install the requirements:
-
-```bash
+git clone https://github.com/QDE-solutions/pizza-bot.git
+cd pizza-bot
 pip install -r requirements.txt
-```
 
-4. Create and populate `.env` file in the root directory. Here are the required keys (_\*_ - always required; _\*\*_ - required only in production):
+О компании
 
-| Key                                  | Value                                                                                                                                       |
-| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| BOT*TOKEN (*\*\_)                    | To get bot token, you need create a bot via [BotFather](https://t.me/BotFather/).                                                           |
-| PROJECT*NAME (*\*\*\_)               | Name of your project on Heroku (required if you want to deploy bot on Heroku).                                                              |
-| WEBHOOK*HOST, WEBHOOK_PATH (*\*\*\_) | Webhook host and path.                                                                                                                      |
-| ADMINS (_\*\*_)                      | A comma-separated string of admins IDs (e.g., 000000000,123456789). To get your Telegram ID, use [Get My ID bot](https://t.me/getmyid_bot). |
+QDE Solutions занимается разработкой Telegram-ботов, сайтов, мобильных приложений, поддержкой существующих проектов и кибербезопасностью.
 
-Example:
+Мы помогаем бизнесу автоматизировать процессы, принимать заявки, обрабатывать заказы и запускать цифровые продукты под реальные задачи.
 
-```properties
-BOT_TOKEN=YOUR_BOT_TOKEN
-ADMINS=123456789,000000000
-```
+Контакты
 
-5. Run `app.py`:
+Website: https://www.qde-solution.com
 
-```bash
-python3 app.py
-```
+Phone: +998 77 400 55 00
+Email: sales@qde-solution.com
 
+License
+
+This project is developed by QDE Solutions.
